@@ -4,17 +4,17 @@
         <category display_value="Custom Applications">e0355b31ef303000a61d5a3615c0fb78</category>
         <description/>
         <device_type>browser</device_type>
-        <hint/>
+        <hint>A list of records in the Operation table which do have a State value of Completed.</hint>
         <name>Operations</name>
         <order>100</order>
-        <roles>x_281451_famousban.operations_user</roles>
+        <roles>x_281451_famousban.operations_user,x_281451_famousban.Clerk</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-10 13:12:25</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f7ee4ff5db01230048309006db961976</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Operations</sys_name>
         <sys_overrides/>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
@@ -22,7 +22,7 @@
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
         <sys_update_name>sys_app_application_f7ee4ff5db01230048309006db961976</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-10 13:12:25</sys_updated_on>
+        <sys_updated_on>2018-10-10 18:37:14</sys_updated_on>
         <title>Operations</title>
         <view_name/>
     </sys_app_application>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role_contains">
     <sys_user_role_contains action="INSERT_OR_UPDATE">
-        <contains display_value="x_281451_famousban.Clerk" name="x_281451_famousban.Clerk">f489ffbddb41230048309006db961905</contains>
+        <contains display_value="x_281451_famousban.Manager_Gestionnaire" name="x_281451_famousban.Manager_Gestionnaire">a22bbbfddb41230048309006db96190a</contains>
         <role display_value="x_281451_famousban.Administrator CDR" name="x_281451_famousban.Administrator CDR">3477bb31db81230048309006db9619f2</role>
         <sys_class_name>sys_user_role_contains</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-10-10 16:21:11</sys_created_on>
-        <sys_id>382a77b1db81230048309006db96191e</sys_id>
+        <sys_created_on>2018-10-10 17:15:00</sys_created_on>
+        <sys_id>09768c0adb81230048309006db96198a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_281451_famousban.Clerk.x_281451_famousban.Administrator CDR</sys_name>
+        <sys_name>x_281451_famousban.Manager_Gestionnaire.x_281451_famousban.Administrator CDR</sys_name>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
         <sys_policy/>
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
-        <sys_update_name>sys_user_role_contains_382a77b1db81230048309006db96191e</sys_update_name>
+        <sys_update_name>sys_user_role_contains_09768c0adb81230048309006db96198a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-10 16:21:11</sys_updated_on>
+        <sys_updated_on>2018-10-10 17:15:00</sys_updated_on>
     </sys_user_role_contains>
 </record_update>

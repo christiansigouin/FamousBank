@@ -7,14 +7,14 @@
         <hint/>
         <name>sys_users</name>
         <order>100</order>
-        <roles>x_281451_famousban.sys_users_user</roles>
+        <roles>x_281451_famousban.sys_users_user,x_281451_famousban.Administrator CDR</roles>
         <sys_class_name>sys_app_application</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-10 12:52:58</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f67a0f35db01230048309006db9619aa</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>sys_users</sys_name>
         <sys_overrides/>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
@@ -22,7 +22,7 @@
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
         <sys_update_name>sys_app_application_f67a0f35db01230048309006db9619aa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-10 12:52:58</sys_updated_on>
+        <sys_updated_on>2018-10-10 17:48:17</sys_updated_on>
         <title>sys_users</title>
         <view_name/>
     </sys_app_application>

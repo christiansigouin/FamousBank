@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
     <sys_app_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="Operations">f7ee4ff5db01230048309006db961976</application>
+        <application display_value="Comptes">fefbe779db41230048309006db9619d3</application>
         <assessment/>
         <content_page/>
         <device_type/>
         <filter/>
-        <hint>Create a new record in the Operations table</hint>
+        <hint>Manager can modify or suppress accounts. Gestionnaire peut : -supprimer un compte client 	- modifier le montant d'un compte client</hint>
         <homepage/>
         <image/>
-        <link_type>NEW</link_type>
+        <link_type>LIST</link_type>
         <map_page/>
-        <mobile_title>New Operation</mobile_title>
+        <mobile_title>Manage Account</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_281451_famousban_operations</name>
-        <order>200</order>
+        <name>x_281451_famousban_comptes</name>
+        <order>100</order>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_281451_famousban.Clerk</roles>
+        <roles>x_281451_famousban.Manager_Gestionnaire</roles>
         <sys_class_name>sys_app_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-10-10 15:36:13</sys_created_on>
+        <sys_created_on>2018-10-10 19:05:11</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>5ceee7f9db41230048309006db9619d8</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>New Operation</sys_name>
+        <sys_id>47de108adbc1230048309006db9619b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manage Account</sys_name>
         <sys_overrides/>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
         <sys_policy/>
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
-        <sys_update_name>sys_app_module_5ceee7f9db41230048309006db9619d8</sys_update_name>
+        <sys_update_name>sys_app_module_47de108adbc1230048309006db9619b0</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-10 18:23:15</sys_updated_on>
+        <sys_updated_on>2018-10-10 19:05:11</sys_updated_on>
         <timeline_page/>
-        <title>New Operation</title>
+        <title>Manage Account</title>
         <uncancelable>false</uncancelable>
-        <view_name/>
+        <view_name>Accounts Gestion</view_name>
         <window_name/>
     </sys_app_module>
 </record_update>
