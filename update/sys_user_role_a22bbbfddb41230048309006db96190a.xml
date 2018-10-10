@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by display_value="x_281451_famousban.Administrator CDR" name="x_281451_famousban.Administrator CDR">3477bb31db81230048309006db9619f2</assignable_by>
+        <can_delegate>true</can_delegate>
+        <description>		- supprimer un compte client&#13;
+		- modifier le montant d'un compte client&#13;
+&#13;
+Droits d'un support</description>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_281451_famousban.Manager_Gestionnaire</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>Manager_Gestionnaire</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-10 16:27:01</sys_created_on>
+        <sys_id>a22bbbfddb41230048309006db96190a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_281451_famousban.Manager_Gestionnaire</sys_name>
+        <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
+        <sys_update_name>sys_user_role_a22bbbfddb41230048309006db96190a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-10 16:27:01</sys_updated_on>
+    </sys_user_role>
+</record_update>

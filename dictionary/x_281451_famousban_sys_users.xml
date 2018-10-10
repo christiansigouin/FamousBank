@@ -9,6 +9,8 @@
                 <element inactive_on_update="false" label="Français" sequence="1" value="français"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Name" mandatory="true" max_length="80" name="u_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Firstname" mandatory="true" max_length="255" name="u_nom" type="string_full_utf8"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="client" label="Role" max_length="40" name="u_role" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Client" sequence="0" value="client"/>

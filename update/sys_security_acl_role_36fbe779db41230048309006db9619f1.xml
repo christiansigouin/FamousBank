@@ -2,17 +2,17 @@
     <sys_security_acl_role action="INSERT_OR_UPDATE">
         <sys_class_name>sys_security_acl_role</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-10-10 13:03:22</sys_created_on>
-        <sys_id>5fdc0bb5db01230048309006db961961</sys_id>
+        <sys_created_on>2018-10-10 15:19:20</sys_created_on>
+        <sys_id>36fbe779db41230048309006db9619f1</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_281451_famousban_comptes.x_281451_famousban.comptes_user</sys_name>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
         <sys_policy/>
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
-        <sys_security_acl display_value="x_281451_famousban_comptes">d3dc0bb5db01230048309006db96195f</sys_security_acl>
-        <sys_update_name>sys_security_acl_role_5fdc0bb5db01230048309006db961961</sys_update_name>
+        <sys_security_acl display_value="x_281451_famousban_comptes">fafbe779db41230048309006db9619ee</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_36fbe779db41230048309006db9619f1</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-10 13:03:22</sys_updated_on>
+        <sys_updated_on>2018-10-10 15:19:20</sys_updated_on>
         <sys_user_role display_value="x_281451_famousban.comptes_user" name="x_281451_famousban.comptes_user">07dc4f75db01230048309006db9619ad</sys_user_role>
         <transaction_id/>
     </sys_security_acl_role>

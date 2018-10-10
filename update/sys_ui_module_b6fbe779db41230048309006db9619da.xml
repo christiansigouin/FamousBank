@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
     <sys_ui_module action="INSERT_OR_UPDATE">
         <active>true</active>
-        <application display_value="Comptes">5fdc0bb5db01230048309006db96195b</application>
+        <application display_value="Comptes">bafbe779db41230048309006db9619d8</application>
         <filter/>
         <name>Comptes</name>
         <order/>
@@ -10,18 +10,18 @@
         <roles>x_281451_famousban.comptes_user</roles>
         <sys_class_name>sys_ui_module</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-10-10 13:03:22</sys_created_on>
+        <sys_created_on>2018-10-10 15:19:19</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>97dc0bb5db01230048309006db96195d</sys_id>
+        <sys_id>b6fbe779db41230048309006db9619da</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Comptes</sys_name>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
         <sys_policy/>
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
-        <sys_update_name>sys_ui_module_97dc0bb5db01230048309006db96195d</sys_update_name>
+        <sys_update_name>sys_ui_module_b6fbe779db41230048309006db9619da</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-10 13:03:22</sys_updated_on>
+        <sys_updated_on>2018-10-10 15:19:19</sys_updated_on>
         <table>x_281451_famousban_comptes</table>
         <uncancelable>false</uncancelable>
         <view_name/>

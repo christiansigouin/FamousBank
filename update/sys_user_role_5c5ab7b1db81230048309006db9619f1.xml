@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by display_value="x_281451_famousban.Administrator CDR" name="x_281451_famousban.Administrator CDR">3477bb31db81230048309006db9619f2</assignable_by>
+        <can_delegate>true</can_delegate>
+        <description>- Peut valider une opération 'En validation'.&#13;
+- Peut accéder aux opérations 'En validation'&#13;
+Droits de commis</description>
+        <elevated_privilege>false</elevated_privilege>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_281451_famousban.Support</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>Support</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-10 16:23:56</sys_created_on>
+        <sys_id>5c5ab7b1db81230048309006db9619f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_281451_famousban.Support</sys_name>
+        <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
+        <sys_update_name>sys_user_role_5c5ab7b1db81230048309006db9619f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-10 16:23:56</sys_updated_on>
+    </sys_user_role>
+</record_update>

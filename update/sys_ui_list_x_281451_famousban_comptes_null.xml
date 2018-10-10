@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_281451_famousban_sys_users" version="2" view="Mobile">
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_281451_famousban_comptes" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>number</element>
-            <list_id display_value="x_281451_famousban_sys_users" element="NULL" name="x_281451_famousban_sys_users" parent="NULL" relationship="NULL" sys_domain="global" view="ef276152bc002300aadb875973a34b38">f4d6ef75db41230048309006db96196d</list_id>
+            <element>u_reference_client</element>
+            <list_id display_value="x_281451_famousban_comptes" element="NULL" name="x_281451_famousban_comptes" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">7a0eefb9db41230048309006db961949</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-10-10 14:56:48</sys_created_on>
-            <sys_id>bcd6ef75db41230048309006db96196d</sys_id>
+            <sys_created_on>2018-10-10 15:28:21</sys_created_on>
+            <sys_id>320eefb9db41230048309006db96194a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-10-10 14:56:48</sys_updated_on>
+            <sys_updated_on>2018-10-10 15:28:21</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
-            <element>u_name</element>
-            <list_id display_value="x_281451_famousban_sys_users" element="NULL" name="x_281451_famousban_sys_users" parent="NULL" relationship="NULL" sys_domain="global" view="ef276152bc002300aadb875973a34b38">f4d6ef75db41230048309006db96196d</list_id>
+            <element>u_amount</element>
+            <list_id display_value="x_281451_famousban_comptes" element="NULL" name="x_281451_famousban_comptes" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">7a0eefb9db41230048309006db961949</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-10-10 14:56:48</sys_created_on>
-            <sys_id>30d6ef75db41230048309006db96196e</sys_id>
+            <sys_created_on>2018-10-10 15:28:21</sys_created_on>
+            <sys_id>b20eefb9db41230048309006db96194a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-10-10 14:56:48</sys_updated_on>
+            <sys_updated_on>2018-10-10 15:28:21</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element/>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <name>x_281451_famousban_sys_users</name>
+            <name>x_281451_famousban_comptes</name>
             <parent/>
             <position/>
             <relationship/>
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2018-10-10 14:56:48</sys_created_on>
+            <sys_created_on>2018-10-10 15:28:21</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>f4d6ef75db41230048309006db96196d</sys_id>
+            <sys_id>7a0eefb9db41230048309006db961949</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_281451_famousban_sys_users</sys_name>
+            <sys_name>x_281451_famousban_comptes</sys_name>
             <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
             <sys_policy/>
             <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
-            <sys_update_name>sys_ui_list_x_281451_famousban_sys_users_Mobile</sys_update_name>
+            <sys_update_name>sys_ui_list_x_281451_famousban_comptes_null</sys_update_name>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2018-10-10 14:56:48</sys_updated_on>
+            <sys_updated_on>2018-10-10 15:28:21</sys_updated_on>
             <sys_user/>
-            <view display_value="Mobile" name="Mobile">ef276152bc002300aadb875973a34b38</view>
+            <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
         </sys_ui_list>
     </sys_ui_list>
