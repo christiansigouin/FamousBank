@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="sys_users" max_length="40" name="x_281451_famousban_sys_users" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="User ID" max_length="40" name="number" read_only="true" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Name" mandatory="true" max_length="80" name="u_client_name" type="field_name"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="english" label="Language" mandatory="true" max_length="40" name="u_language" type="string">
+            <choice>
+                <element inactive_on_update="false" label="English" sequence="0" value="english"/>
+                <element inactive_on_update="false" label="Français" sequence="1" value="français"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="client" label="Role" max_length="40" name="u_role" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Client" sequence="0" value="client"/>
+                <element inactive_on_update="false" label="Clerk" sequence="1" value="clerk"/>
+                <element inactive_on_update="false" label="Support" sequence="2" value="support"/>
+                <element inactive_on_update="false" label="Manager" sequence="3" value="manager"/>
+                <element inactive_on_update="false" label="Administrator CDR" sequence="4" value="administratorcdr"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

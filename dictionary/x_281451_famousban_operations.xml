@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Operations" max_length="40" name="x_281451_famousban_operations" type="collection">
+        <element default="true" label="To be validated by support" max_length="40" name="u_boolean_validate" type="boolean"/>
+        <element label="Client" max_length="32" name="u_client_reference" read_only="true" reference="x_281451_famousban_sys_users" type="reference"/>
+        <element label="Montant" mandatory="true" max_length="40" name="u_montant" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="beingcreated" label="Status" max_length="40" name="u_status" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Being Created" sequence="0" value="beingcreated"/>
+                <element inactive_on_update="false" label="Validation" sequence="1" value="validation"/>
+                <element inactive_on_update="false" label="Completed" sequence="2" value="completed"/>
+            </choice>
+        </element>
+        <element label="TransactionTime" max_length="40" name="u_transaction_date_time" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="add" label="Type" max_length="40" name="u_type" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Add" sequence="0" value="add"/>
+                <element inactive_on_update="false" label="Withdraw" sequence="1" value="withdraw"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_client_reference"/>
+        </index>
+    </element>
+</database>

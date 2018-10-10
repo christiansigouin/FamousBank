@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="x_281451_famousban_sys_users" label="Comptes" max_length="40" name="x_281451_famousban_comptes" type="collection">
+        <element dependent="number" dependent_on_field="number" label="Client" max_length="32" name="u_client_reference" read_only="true" reference="x_281451_famousban_sys_users" type="reference" use_dependent_field="true"/>
+        <element label="Montant" mandatory="true" max_length="40" name="u_montant" type="integer"/>
+        <index name="index">
+            <element name="u_client_reference"/>
+        </index>
+    </element>
+</database>
