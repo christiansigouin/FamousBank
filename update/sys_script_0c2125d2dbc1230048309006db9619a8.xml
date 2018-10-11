@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_281451_famousban_operations</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_281451_famousban_operations">u_status=completed^EQ<item endquery="false" field="u_status" goto="false" newquery="false" operator="=" or="false" value="completed"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Do Operation in Account</name>
+        <order>60</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions>x_281451_famousban.Clerk,x_281451_famousban.Manager_Gestionnaire,x_281451_famousban.Support,x_281451_famousban.Administrator CDR,x_281451_famousban.comptes_user,x_281451_famousban.operations_user</role_conditions>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	// operande1 == Old account amount
+	function addOperation(operande1, operande2){
+		var total = 0;
+		var testIfOperationSucceed = true;
+		
+		try{ //TryAdd
+				total = parseInt(operande1, 10) + parseInt(operande2, 10);			
+		}
+		catch(addOperationError){
+			testIfOperationSucceed = false;
+			var jslogmessage;
+			jslogmessage = 'A JavaScript runtime error occurred in addOperation :'; 
+			jslog( jslogmessage + addOperationError.message);
+		}
+		if(testIfOperationSucceed){
+			return total;
+		}
+		else{
+			gs.error("FamousBank App: Operation Add unsuccessfull");
+			total = parseInt(operande1, 10);
+			return total;
+		}
+	}
+	function withdrawOperation(){
+		var total = 0;
+		var testIfOperationSucceed = true;
+		
+		try{ //TryWithdraw
+				total = parseInt(operande1, 10) - parseInt(operande2, 10);			
+		}
+		catch(withdrawOperationError){
+			testIfOperationSucceed = false;
+			var jslogmessage;
+			jslogmessage = 'A JavaScript runtime error occurred in withdrawOperation :'; 
+			jslog( jslogmessage + withdrawOperationError.message);
+		}
+		if(testIfOperationSucceed){
+			return total;
+		}
+		else{
+			gs.error("FamousBank App: Operation withdraw unsuccessfull");
+			total = parseInt(operande1, 10);
+			return total;
+		}
+	}
+	
+	try{ //TryQuery
+		var account = new GlideRecord('Comptes');
+	
+		account.addQuery('u_reference_client', current.u_client_reference); //Va chercher le ou les comptes du clients
+		// Get interdi i-haut
+	
+		account.query();
+		
+		try{ //TryOperation
+			var accountAmount;
+			var operationAmount;
+			var newAccountAmount;
+			//Parcourir tous les comptes du client et executer l'operation.
+			// Si on ajoute une deuxième référence on pourra choisir un compte spécifique dans lequel faire l'operation
+			while(account.next()){
+				
+				accountAmount = account.getValue('u_amount'); //account.u_amount; 
+				operationAmount = current.u_montant;
+				
+				//Test le type d'operation pour appeller la fonction correspondante
+				if(current.u_type == 1){
+					// operande1 == Old account amount
+					newAccountAmount = addOperation(accountAmount, operationAmount);
+				}
+				else{
+					newAccountAmount = withdrawOperation(accountAmount, operationAmount);
+				}
+				
+		
+				//g_form.setValue('u_amount', newAccountAmount);
+				account.setValue('u_amount', newAccountAmount); 
+				
+				account.update();
+			}
+		}
+		catch(TryOperationError){
+			var jslogmessage2;
+			jslogmessage2 = 'A JavaScript runtime error occurred in TryOperation :'; 
+			jslog( jslogmessage2 + TryOperationError.message);
+		}
+		
+	}
+	catch(TryQueryError){
+		var jslogmessage1;
+			jslogmessage1 = 'A JavaScript runtime error occurred in TryQuery :'; 
+			jslog( jslogmessage1 + TryQueryError.message);
+	}
+	
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-11 18:59:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0c2125d2dbc1230048309006db9619a8</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Do Operation in Account</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
+        <sys_update_name>sys_script_0c2125d2dbc1230048309006db9619a8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-11 20:15:48</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=0c2125d2dbc1230048309006db9619a8"/>
+</record_update>
