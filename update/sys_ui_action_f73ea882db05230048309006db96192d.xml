@@ -4,7 +4,7 @@
         <active>true</active>
         <client>false</client>
         <client_script_v2/>
-        <comments/>
+        <comments>Validate Operation (change Tobe validate Value to false and do Operation)</comments>
         <condition/>
         <form_action>true</form_action>
         <form_button>true</form_button>
@@ -13,7 +13,7 @@
         <form_link>false</form_link>
         <form_menu_button_v2>false</form_menu_button_v2>
         <form_style/>
-        <hint/>
+        <hint>Validate and do Operation)</hint>
         <isolate_script>false</isolate_script>
         <list_action>false</list_action>
         <list_banner_button>false</list_banner_button>
@@ -25,11 +25,17 @@
         <list_style/>
         <name>Validate Operation</name>
         <onclick/>
-        <order>500</order>
-        <script><![CDATA[
+        <order>100</order>
+        <script><![CDATA[//Changer la valeur To be valided by support to false
 
-//Changer la valeur To be valided by support to false
 
+	
+	current.u_boolean_validate = false;
+	if(current.u_status == 'validation'){  //u_status validation
+		current.u_status = 'completed';
+	}
+	
+	current.update();
 ]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -41,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f73ea882db05230048309006db96192d</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Validate Operation</sys_name>
         <sys_overrides/>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
@@ -49,7 +55,7 @@
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
         <sys_update_name>sys_ui_action_f73ea882db05230048309006db96192d</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-12 15:24:15</sys_updated_on>
+        <sys_updated_on>2018-10-12 19:53:15</sys_updated_on>
         <table>x_281451_famousban_operations</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
