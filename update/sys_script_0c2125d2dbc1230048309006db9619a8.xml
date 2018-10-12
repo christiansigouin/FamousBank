@@ -33,56 +33,66 @@
 
 	// Add your code here
 	// operande1 == Old account amount
-	function addOperation(operande1, operande2){
-		var total = 0;
+	function addOperation(accountAmount, operationAmount){
+
+		var total;
 		var testIfOperationSucceed = true;
 		
 		try{ //TryAdd
-				total = parseInt(operande1, 10) + parseInt(operande2, 10);			
+			var operande1 = accountAmount;
+			var	operande2 = operationAmount;
+				//total = parseInt(operande1, 10) + parseInt(operande2, 10);	
+				total = operande1 + operande2;
 		}
 		catch(addOperationError){
 			testIfOperationSucceed = false;
 			var jslogmessage;
 			jslogmessage = 'A JavaScript runtime error occurred in addOperation :'; 
-			jslog( jslogmessage + addOperationError.message);
+			jslogmessage = jslogmessage + addOperationError.message;
+			jslog( jslogmessage );
 		}
 		if(testIfOperationSucceed){
 			return total;
 		}
 		else{
 			gs.error("FamousBank App: Operation Add unsuccessfull");
-			total = parseInt(operande1, 10);
+			total = accountAmount;
 			return total;
 		}
 	}
-	function withdrawOperation(){
-		var total = 0;
+	function withdrawOperation(accountAmount, operationAmount){
+		var total;
 		var testIfOperationSucceed = true;
 		
 		try{ //TryWithdraw
-				total = parseInt(operande1, 10) - parseInt(operande2, 10);			
+			var operande1 = accountAmount;
+			var	operande2 = operationAmount;
+				//total = parseInt(operande1, 10) - parseInt(operande2, 10);
+			total = operande1 - operande2;
 		}
 		catch(withdrawOperationError){
 			testIfOperationSucceed = false;
 			var jslogmessage;
 			jslogmessage = 'A JavaScript runtime error occurred in withdrawOperation :'; 
-			jslog( jslogmessage + withdrawOperationError.message);
+			jslogmessage = jslogmessage + withdrawOperationError.message;
+			
+			jslog( jslogmessage );
 		}
 		if(testIfOperationSucceed){
 			return total;
 		}
 		else{
 			gs.error("FamousBank App: Operation withdraw unsuccessfull");
-			total = parseInt(operande1, 10);
+			total = accountAmount;
 			return total;
 		}
 	}
 	
 	try{ //TryQuery
-		var account = new GlideRecord('Comptes');
+		var account = new GlideRecord('x_281451_famousban_comptes'); // Nom de la table Comptes
 	
 		account.addQuery('u_reference_client', current.u_client_reference); //Va chercher le ou les comptes du clients
-		// Get interdi i-haut
+		// Get interdi ci-haut... Query sur Comptes interdi.
 	
 		account.query();
 		
@@ -93,37 +103,55 @@
 			//Parcourir tous les comptes du client et executer l'operation.
 			// Si on ajoute une deuxième référence on pourra choisir un compte spécifique dans lequel faire l'operation
 			while(account.next()){
+				//Double check si on refere le bon client
+				if(current.u_client_reference == account.getValue('u_reference_client')){
+					
 				
-				accountAmount = account.getValue('u_amount'); //account.u_amount; 
-				operationAmount = current.u_montant;
-				
-				//Test le type d'operation pour appeller la fonction correspondante
-				if(current.u_type == 1){
-					// operande1 == Old account amount
-					newAccountAmount = addOperation(accountAmount, operationAmount);
+					accountAmount = account.u_amount; //account.getValue('u_amount'); //
+					
+					operationAmount = current.u_montant;
+
+					var operationType = current.u_type;
+					
+					//Test le type d'operation pour appeller la fonction correspondante
+					if(operationType == "add" || operationType == 1){ 
+						// operande1 == Old account amount
+						newAccountAmount = addOperation(accountAmount, operationAmount);
+					}
+					else if(operationType == "withdraw" || operationType == 2){ 
+						newAccountAmount = withdrawOperation(accountAmount, operationAmount);
+					}
+					else{
+						gs.error("FamousBank App: Operation type unknown");
+						newAccountAmount = accountAmount;
+						current.setAbortAction(true);
+					}
+
+
+					//Set Transaction TIME
+					var rightnow = new GlideDateTime();
+					current.u_transaction_date_time = rightnow;
+					
+					//g_form.setValue('u_amount', newAccountAmount);
+					account.setValue('u_amount', newAccountAmount); 
+
+					account.update();
 				}
-				else{
-					newAccountAmount = withdrawOperation(accountAmount, operationAmount);
-				}
-				
-		
-				//g_form.setValue('u_amount', newAccountAmount);
-				account.setValue('u_amount', newAccountAmount); 
-				
-				account.update();
 			}
 		}
 		catch(TryOperationError){
 			var jslogmessage2;
 			jslogmessage2 = 'A JavaScript runtime error occurred in TryOperation :'; 
-			jslog( jslogmessage2 + TryOperationError.message);
+			jslogmessage2 = jslogmessage2 + TryOperationError.message;
+			jslog( jslogmessage2 );
 		}
 		
 	}
 	catch(TryQueryError){
 		var jslogmessage1;
 			jslogmessage1 = 'A JavaScript runtime error occurred in TryQuery :'; 
-			jslog( jslogmessage1 + TryQueryError.message);
+			jslogmessage1 = jslogmessage1 + TryQueryError.message;
+			jslog( jslogmessage1 );
 	}
 	
 })(current, previous);]]></script>
@@ -133,7 +161,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0c2125d2dbc1230048309006db9619a8</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>Do Operation in Account</sys_name>
         <sys_overrides/>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
@@ -141,7 +169,7 @@
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
         <sys_update_name>sys_script_0c2125d2dbc1230048309006db9619a8</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-11 20:15:48</sys_updated_on>
+        <sys_updated_on>2018-10-12 13:50:22</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

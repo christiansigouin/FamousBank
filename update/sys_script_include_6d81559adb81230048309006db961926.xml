@@ -23,7 +23,8 @@
 				testWithdrawIfSucceed = false;
 				var jslogmessage2;
 				jslogmessage2 = 'A JavaScript runtime error occurred in withdraw fct try2 :'; 
-				jslog( jslogmessage2 + errText2.message);
+				jslogmessage2 = jslogmessage2 + errText2.message;
+				jslog( jslogmessage2 );
 			}
 			
 		}
@@ -43,13 +44,13 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-10-11 17:28:18</sys_created_on>
         <sys_id>6d81559adb81230048309006db961926</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>withdraw</sys_name>
         <sys_package display_value="FamousBank" source="x_281451_famousban">c2f54371db01230048309006db9619d3</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="FamousBank">c2f54371db01230048309006db9619d3</sys_scope>
         <sys_update_name>sys_script_include_6d81559adb81230048309006db961926</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-10-11 17:58:57</sys_updated_on>
+        <sys_updated_on>2018-10-12 12:51:13</sys_updated_on>
     </sys_script_include>
 </record_update>
