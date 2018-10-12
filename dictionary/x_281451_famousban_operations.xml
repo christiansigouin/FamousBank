@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Operations" max_length="40" name="x_281451_famousban_operations" type="collection">
-        <element label="To be validated by support" max_length="40" name="u_boolean_validate" type="boolean"/>
+        <element default="true" label="To be validated by support" max_length="40" name="u_boolean_validate" type="boolean"/>
         <element label="Client" mandatory="true" max_length="32" name="u_client_reference" reference="x_281451_famousban_sys_users" type="reference"/>
         <element label="Amount" mandatory="true" max_length="40" name="u_montant" type="integer"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="beingcreated" label="Status" max_length="40" name="u_status" type="string">
